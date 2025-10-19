@@ -8,23 +8,24 @@ CORS(app)
 
 # --- Updated Regex Engine ---
 problem_regex = None
-variation_map = {} # This will now store objects, not just terms
+variation_map = {}  # This will now store objects, not just terms
 
 def build_regex_engine():
     global problem_regex, variation_map
     print("Building regex engine from knowledge base...")
     
-    with open('problems_kb.json', 'r') as f:
+    # Updated path to look in data folder
+    with open('data/problems_kb.json', 'r') as f:
         kb = json.load(f)
         
     all_variations = []
     for item in kb:
         canonical_term = item['term']
-        category = item['category'] # NEW: Get the category
+        category = item['category']
         
         for variation in item['variations']:
             variation_lower = variation.lower()
-            # NEW: Store the full object in the map
+            # Store the full object in the map
             variation_map[variation_lower] = {
                 "term": canonical_term,
                 "category": category
@@ -34,12 +35,16 @@ def build_regex_engine():
     pattern = r'\b(' + '|'.join(all_variations) + r')\b'
     problem_regex = re.compile(pattern, re.IGNORECASE)
     print("Regex engine build complete.")
-# --- End of new regex logic ---
 
 def load_data():
-    # Make sure this path is correct!
     with open('data/mock.json', 'r') as f:
         return json.load(f)
+
+# NEW: Function to save data permanently
+def save_data():
+    with open('data/mock.json', 'w') as f:
+        json.dump(patients_data, f, indent=2)
+    print("Data saved to file.")
 
 patients_data = load_data()
 
@@ -54,10 +59,10 @@ def update_patient(patient_id):
     for i, patient in enumerate(patients_data):
         if patient['id'] == patient_id:
             patients_data[i] = updated_data
+            save_data()  # Save after updating
             return jsonify(updated_data), 200
     return jsonify({"error": "Patient not found"}), 404
 
-# --- Updated Problem Detection Endpoint ---
 @app.route("/detect-problems", methods=["POST"])
 def detect_problems():
     data = request.json
@@ -69,7 +74,7 @@ def detect_problems():
     for match in problem_regex.finditer(note_text):
         found_variation = match.group(1).lower()
         
-        # Look up the full info object (e.g., {"term": "Hypertension", "category": "Diagnosis"})
+        # Look up the full info object
         problem_info = variation_map[found_variation]
         
         # Use the canonical term as the key to prevent duplicates
@@ -77,14 +82,12 @@ def detect_problems():
         
     # Return a list of the unique problem objects
     return jsonify(list(found_problems_map.values()))
-# --- End of new detection endpoint ---
 
-# --- NEW: Route to CREATE a new patient ---
 @app.route("/patients", methods=["POST"])
 def add_patient():
     global patients_data
     
-    # 1. Get the data from the frontend
+    # Get the data from the frontend
     data = request.json
     patient_name = data.get('name')
     patient_age = data.get('age')
@@ -92,10 +95,13 @@ def add_patient():
     if not patient_name or patient_age is None:
         return jsonify({"error": "Name and age are required"}), 400
 
-    # 2. Find the next available ID
-    new_id = max(p['id'] for p in patients_data) + 1
+    # Find the next available ID
+    if patients_data:
+        new_id = max(p['id'] for p in patients_data) + 1
+    else:
+        new_id = 1  # Handle empty patient list
 
-    # 3. Create the new patient object
+    # Create the new patient object
     new_patient = {
         "id": new_id,
         "name": patient_name,
@@ -106,13 +112,13 @@ def add_patient():
         "medications": []
     }
 
-    # 4. Add it to our "database"
+    # Add it to our "database"
     patients_data.append(new_patient)
+    save_data()  # Save after adding
 
-    # 5. Send the new patient back to the frontend
+    # Send the new patient back to the frontend
     return jsonify(new_patient), 201
 
-# --- NEW: Route to DELETE a specific patient ---
 @app.route("/patients/<int:patient_id>", methods=["DELETE"])
 def delete_patient(patient_id):
     global patients_data
@@ -127,9 +133,16 @@ def delete_patient(patient_id):
     # If we found them, remove them
     if patient_to_delete:
         patients_data.remove(patient_to_delete)
+        save_data()  # Save after deleting
         return jsonify({"status": "deleted", "id": patient_id}), 200
     else:
         return jsonify({"error": "Patient not found"}), 404
+
+@app.route("/problems-kb")
+def get_problems_kb():
+    with open('data/problems_kb.json', 'r') as f:
+        kb = json.load(f)
+    return jsonify(kb)
 
 if __name__ == "__main__":
     build_regex_engine()

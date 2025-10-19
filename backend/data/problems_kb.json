@@ -1,0 +1,532 @@
+[
+  {
+    "term": "Abdominal Pain",
+    "category": "Symptom",
+    "variations": ["abdominal pain", "abd pain"]
+  },
+  {
+    "term": "Acute Kidney Injury",
+    "category": "Diagnosis",
+    "variations": ["acute kidney injury", "aki", "acute renal failure", "arf"]
+  },
+  {
+    "term": "Altered Mental Status",
+    "category": "Symptom",
+    "variations": ["altered mental status", "ams", "confused", "confusion"]
+  },
+  {
+    "term": "Amlodipine",
+    "category": "Medication",
+    "variations": ["amlodipine", "norvasc"]
+  },
+  {
+    "term": "Anemia",
+    "category": "Diagnosis",
+    "variations": ["anemia", "anemic", "low h&h", "low hemoglobin"]
+  },
+  {
+    "term": "Angina",
+    "category": "Symptom",
+    "variations": ["angina"]
+  },
+  {
+    "term": "Anxiety",
+    "category": "Diagnosis",
+    "variations": ["anxiety", "anxious"]
+  },
+  {
+    "term": "Antibiotics",
+    "category": "Medication",
+    "variations": ["antibiotics", "abx"]
+  },
+  {
+    "term": "Anticoagulation",
+    "category": "Medication",
+    "variations": ["anticoagulation", "on ac", "blood thinner"]
+  },
+  {
+    "term": "Appendicitis",
+    "category": "Diagnosis",
+    "variations": ["appendicitis", "appy"]
+  },
+  {
+    "term": "Ascites",
+    "category": "Physical Exam",
+    "variations": ["ascites"]
+  },
+  {
+    "term": "As needed (PRN)",
+    "category": "Abbreviation/Misc",
+    "variations": ["as needed", "prn"]
+  },
+  {
+    "term": "Aspirin",
+    "category": "Medication",
+    "variations": ["aspirin", "asa"]
+  },
+  {
+    "term": "Asthma",
+    "category": "Diagnosis",
+    "variations": ["asthma"]
+  },
+  {
+    "term": "Atorvastatin",
+    "category": "Medication",
+    "variations": ["atorvastatin", "lipitor"]
+  },
+  {
+    "term": "Atrial Fibrillation",
+    "category": "Diagnosis",
+    "variations": ["atrial fibrillation", "afib", "a-fib"]
+  },
+  {
+    "term": "Back Pain",
+    "category": "Symptom",
+    "variations": ["back pain", "low back pain", "lbp"]
+  },
+  {
+    "term": "Basic Metabolic Panel",
+    "category": "Lab/Imaging",
+    "variations": ["basic metabolic panel", "bmp", "chems-7", "chem 7"]
+  },
+  {
+    "term": "Bilateral",
+    "category": "Abbreviation/Misc",
+    "variations": ["bilateral", "b/l"]
+  },
+  {
+    "term": "Blood Pressure",
+    "category": "Abbreviation/Misc",
+    "variations": ["blood pressure", "bp"]
+  },
+  {
+    "term": "Blood Urea Nitrogen",
+    "category": "Lab/Imaging",
+    "variations": ["bun"]
+  },
+  {
+    "term": "Bradycardia",
+    "category": "Symptom",
+    "variations": ["bradycardia", "brady", "slow heart rate"]
+  },
+  {
+    "term": "By mouth (PO)",
+    "category": "Abbreviation/Misc",
+    "variations": ["by mouth", "po"]
+  },
+  {
+    "term": "Cellulitis",
+    "category": "Diagnosis",
+    "variations": ["cellulitis"]
+  },
+  {
+    "term": "Chest Pain",
+    "category": "Symptom",
+    "variations": ["chest pain", "cp"]
+  },
+  {
+    "term": "Chest X-Ray",
+    "category": "Lab/Imaging",
+    "variations": ["chest x-ray", "cxr", "x-ray"]
+  },
+  {
+    "term": "Cholecystitis",
+    "category": "Diagnosis",
+    "variations": ["cholecystitis", "acute chole"]
+  },
+  {
+    "term": "Chronic Kidney Disease",
+    "category": "Diagnosis",
+    "variations": ["chronic kidney disease", "ckd", "renal failure"]
+  },
+  {
+    "term": "Cirrhosis",
+    "category": "Diagnosis",
+    "variations": ["cirrhosis", "liver failure"]
+  },
+  {
+    "term": "Complete Blood Count",
+    "category": "Lab/Imaging",
+    "variations": ["complete blood count", "cbc"]
+  },
+  {
+    "term": "Comprehensive Metabolic Panel",
+    "category": "Lab/Imaging",
+    "variations": ["comprehensive metabolic panel", "cmp", "chems-10", "chem 10"]
+  },
+  {
+    "term": "Congestive Heart Failure",
+    "category": "Diagnosis",
+    "variations": ["heart failure", "hf", "chf", "congestive heart failure", "hfref", "hfpef"]
+  },
+  {
+    "term": "COPD",
+    "category": "Diagnosis",
+    "variations": ["copd", "chronic obstructive pulmonary disease", "emphysema"]
+  },
+  {
+    "term": "Coronary Artery Disease",
+    "category": "Diagnosis",
+    "variations": ["coronary artery disease", "cad"]
+  },
+  {
+    "term": "Cough",
+    "category": "Symptom",
+    "variations": ["cough"]
+  },
+  {
+    "term": "COVID-19",
+    "category": "Diagnosis",
+    "variations": ["covid-19", "covid", "sars-cov-2"]
+  },
+  {
+    "term": "Creatinine",
+    "category": "Lab/Imaging",
+    "variations": ["creatinine", "cr"]
+  },
+  {
+    "term": "CT Scan",
+    "category": "Lab/Imaging",
+    "variations": ["ct scan", "cat scan"]
+  },
+  {
+    "term": "Deep Vein Thrombosis",
+    "category": "Diagnosis",
+    "variations": ["deep vein thrombosis", "dvt"]
+  },
+  {
+    "term": "Depression",
+    "category": "Diagnosis",
+    "variations": ["depression", "depressed"]
+  },
+  {
+    "term": "Diarrhea",
+    "category": "Symptom",
+    "variations": ["diarrhea"]
+  },
+  {
+    "term": "Diverticulitis",
+    "category": "Diagnosis",
+    "variations": ["diverticulitis"]
+  },
+  {
+    "term": "Dizziness",
+    "category": "Symptom",
+    "variations": ["dizziness", "dizzy", "lightheaded"]
+  },
+  {
+    "term": "Echocardiogram",
+    "category": "Lab/Imaging",
+    "variations": ["echocardiogram", "echo", "tte"]
+  },
+  {
+    "term": "Edema",
+    "category": "Physical Exam",
+    "variations": ["edema", "swelling", "le edema", "lower extremity edema"]
+  },
+  {
+    "term": "Electrocardiogram",
+    "category": "Lab/Imaging",
+    "variations": ["electrocardiogram", "ekg", "ecg"]
+  },
+  {
+    "term": "Epilepsy",
+    "category": "Diagnosis",
+    "variations": ["epilepsy", "seizure disorder"]
+  },
+  {
+    "term": "Fatigue",
+    "category": "Symptom",
+    "variations": ["fatigue", "tired", "lethargy"]
+  },
+  {
+    "term": "Fever",
+    "category": "Symptom",
+    "variations": ["fever", "febrile"]
+  },
+  {
+    "term": "Gastroenteritis",
+    "category": "Diagnosis",
+    "variations": ["gastroenteritis", "gastro"]
+  },
+  {
+    "term": "GERD",
+    "category": "Diagnosis",
+    "variations": ["gastroesophageal reflux disease", "gerd", "acid reflux"]
+  },
+  {
+    "term": "GI Bleed",
+    "category": "Diagnosis",
+    "variations": ["gi bleed", "gastrointestinal bleed", "upper gi bleed", "ugib", "lgib"]
+  },
+  {
+    "term": "Guarding",
+    "category": "Physical Exam",
+    "variations": ["guarding", "abdominal guarding"]
+  },
+  {
+    "term": "Headache",
+    "category": "Symptom",
+    "variations": ["headache", "ha"]
+  },
+  {
+    "term": "Hepatosplenomegaly",
+    "category": "Physical Exam",
+    "variations": ["hepatosplenomegaly", "hsm"]
+  },
+  {
+    "term": "History of",
+    "category": "Abbreviation/Misc",
+    "variations": ["history of", "hx of", "hx", "h/o"]
+  },
+  {
+    "term": "Hyperlipidemia",
+    "category": "Diagnosis",
+    "variations": ["hyperlipidemia", "hlp", "high cholesterol"]
+  },
+  {
+    "term": "Hypertension",
+    "category": "Diagnosis",
+    "variations": ["hypertension", "htn", "high blood pressure"]
+  },
+  {
+    "term": "Hyperthyroidism",
+    "category": "Diagnosis",
+    "variations": ["hyperthyroidism"]
+  },
+  {
+    "term": "Hypokalemia",
+    "category": "Lab/Imaging",
+    "variations": ["hypokalemia", "low potassium"]
+  },
+  {
+    "term": "Hyponatremia",
+    "category": "Lab/Imaging",
+    "variations": ["hyponatremia", "low sodium"]
+  },
+  {
+    "term": "Hypotension",
+    "category": "Symptom",
+    "variations": ["hypotension", "low blood pressure"]
+  },
+  {
+    "term": "Hypothyroidism",
+    "category": "Diagnosis",
+    "variations": ["hypothyroidism"]
+  },
+  {
+    "term": "Insulin",
+    "category": "Medication",
+    "variations": ["insulin"]
+  },
+  {
+    "term": "Intravenous Fluids",
+    "category": "Medication",
+    "variations": ["iv fluids", "ivf", "fluids", "normal saline", "ns"]
+  },
+  {
+    "term": "Jaundice",
+    "category": "Physical Exam",
+    "variations": ["jaundice", "jaundiced"]
+  },
+  {
+    "term": "Jugular Vein Distention",
+    "category": "Physical Exam",
+    "variations": ["jugular vein distention", "jvd"]
+  },
+  {
+    "term": "Leukocytosis",
+    "category": "Lab/Imaging",
+    "variations": ["leukocytosis", "high wbc", "high white count"]
+  },
+  {
+    "term": "Lisinopril",
+    "category": "Medication",
+    "variations": ["lisinopril"]
+  },
+  {
+    "term": "Liver Function Tests",
+    "category": "Lab/Imaging",
+    "variations": ["liver function tests", "lfts"]
+  },
+  {
+    "term": "Metformin",
+    "category": "Medication",
+    "variations": ["metformin", "glucophage"]
+  },
+  {
+    "term": "Metoprolol",
+    "category": "Medication",
+    "variations": ["metoprolol"]
+  },
+  {
+    "term": "Migraine",
+    "category": "Symptom",
+    "variations": ["migraine"]
+  },
+  {
+    "term": "MRI",
+    "category": "Lab/Imaging",
+    "variations": ["mri", "magnetic resonance imaging"]
+  },
+  {
+    "term": "Murmur",
+    "category": "Physical Exam",
+    "variations": ["murmur", "cardiac murmur"]
+  },
+  {
+    "term": "Myocardial Infarction",
+    "category": "Diagnosis",
+    "variations": ["myocardial infarction", "mi", "heart attack", "stemi", "nstemi"]
+  },
+  {
+    "term": "Nausea/Vomiting",
+    "category": "Symptom",
+    "variations": ["nausea", "vomiting", "n/v", "emesis"]
+  },
+  {
+    "term": "Nothing by Mouth",
+    "category": "Abbreviation/Misc",
+    "variations": ["nothing by mouth", "npo"]
+  },
+  {
+    "term": "Opioids",
+    "category": "Medication",
+    "variations": ["opioids", "narcotics", "morphine", "dilaudid", "hydromorphone", "oxycodone"]
+  },
+  {
+    "term": "Pancreatitis",
+    "category": "Diagnosis",
+    "variations": ["pancreatitis"]
+  },
+  {
+    "term": "Past Medical History",
+    "category": "Abbreviation/Misc",
+    "variations": ["past medical history", "pmh", "pmhx"]
+  },
+  {
+    "term": "Pneumonia",
+    "category": "Diagnosis",
+    "variations": ["pneumonia", "pna"]
+  },
+  {
+    "term": "Pulmonary Embolism",
+    "category": "Diagnosis",
+    "variations": ["pulmonary embolism", "pe"]
+  },
+  {
+    "term": "Rales",
+    "category": "Physical Exam",
+    "variations": ["rales", "crackles", "pulmonary rales"]
+  },
+  {
+    "term": "Rebound Tenderness",
+    "category": "Physical Exam",
+    "variations": ["rebound", "rebound tenderness"]
+  },
+  {
+    "term": "Review of Systems",
+    "category": "Abbreviation/Misc",
+    "variations": ["review of systems", "ros"]
+  },
+  {
+    "term": "Rhonchi",
+    "category": "Physical Exam",
+    "variations": ["rhonchi"]
+  },
+  {
+    "term": "Rule Out",
+    "category": "Abbreviation/Misc",
+    "variations": ["rule out", "r/o"]
+  },
+  {
+    "term": "Seizure",
+    "category": "Symptom",
+    "variations": ["seizure", "convulsion"]
+  },
+  {
+    "term": "Sepsis",
+    "category": "Diagnosis",
+    "variations": ["sepsis", "septic"]
+  },
+  {
+    "term": "Shortness of Breath",
+    "category": "Symptom",
+    "variations": ["shortness of breath", "sob", "dyspnea"]
+  },
+  {
+    "term": "Small Bowel Obstruction",
+    "category": "Diagnosis",
+    "variations": ["small bowel obstruction", "sbo"]
+  },
+  {
+    "term": "Stroke",
+    "category": "Diagnosis",
+    "variations": ["stroke", "cva", "cerebrovascular accident", "tia"]
+  },
+  {
+    "term": "Syncope",
+    "category": "Symptom",
+    "variations": ["syncope", "passed out", "fainted"]
+  },
+  {
+    "term": "Tachycardia",
+    "category": "Symptom",
+    "variations": ["tachycardia", "tachy", "fast heart rate"]
+  },
+  {
+    "term": "Thrombocytopenia",
+    "category": "Lab/Imaging",
+    "variations": ["thrombocytopenia", "low platelets"]
+  },
+  {
+    "term": "Troponin",
+    "category": "Lab/Imaging",
+    "variations": ["troponin", "trop"]
+  },
+  {
+    "term": "Twice a day (BID)",
+    "category": "Abbreviation/Misc",
+    "variations": ["twice a day", "bid"]
+  },
+  {
+    "term": "Tylenol (Acetaminophen)",
+    "category": "Medication",
+    "variations": ["tylenol", "acetaminophen", "apap"]
+  },
+  {
+    "term": "Type 1 Diabetes",
+    "category": "Diagnosis",
+    "variations": ["type 1 diabetes", "dm1", "t1dm"]
+  },
+  {
+    "term": "Type 2 Diabetes",
+    "category": "Diagnosis",
+    "variations": ["type 2 diabetes", "dm2", "t2dm", "diabetes mellitus type 2"]
+  },
+  {
+    "term": "Ultrasound",
+    "category": "Lab/Imaging",
+    "variations": ["ultrasound", "us"]
+  },
+  {
+    "term": "Urinary Tract Infection",
+    "category": "Diagnosis",
+    "variations": ["urinary tract infection", "uti"]
+  },
+  {
+    "term": "Warfarin",
+    "category": "Medication",
+    "variations": ["warfarin", "coumadin"]
+  },
+  {
+    "term": "Weakness",
+    "category": "Symptom",
+    "variations": ["weakness", "weak"]
+  },
+  {
+    "term": "Wheezing",
+    "category": "Physical Exam",
+    "variations": ["wheezing", "wheeze"]
+  }
+]

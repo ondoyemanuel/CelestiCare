@@ -1,0 +1,86 @@
+[
+  {
+    "age": 45,
+    "id": 1,
+    "labs": [
+      {
+        "date": "2025-10-18",
+        "name": "Creatinine",
+        "units": "mg/dL",
+        "value": 1.2
+      },
+      {
+        "date": "2025-10-18",
+        "name": "Potassium",
+        "units": "mEq/L",
+        "value": 4.1
+      },
+      {
+        "date": "2025-10-18",
+        "name": "WBC",
+        "units": "K/uL",
+        "value": 9.5
+      },
+      {
+        "date": "2025-10-18",
+        "name": "Troponin",
+        "units": "ng/mL",
+        "value": 0.01
+      }
+    ],
+    "medications": [
+      {
+        "name": "Lisinopril 10mg",
+        "status": "active"
+      },
+      {
+        "name": "Amlodipine 5mg",
+        "status": "active"
+      }
+    ],
+    "name": "John Doe",
+    "notes": [],
+    "problems": [
+      "Hypertension",
+      "Type 1 Diabetes",
+      "type"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "age": 60,
+    "notes": [],
+    "problems": [],
+    "labs": [
+      {
+        "name": "Creatinine",
+        "value": 1.5,
+        "units": "mg/dL",
+        "date": "2025-10-18"
+      },
+      {
+        "name": "WBC",
+        "value": 15.2,
+        "units": "K/uL",
+        "date": "2025-10-18"
+      },
+      {
+        "name": "Lactate",
+        "value": 2.5,
+        "units": "mmol/L",
+        "date": "2025-10-18"
+      }
+    ],
+    "medications": [
+      {
+        "name": "IV Fluids",
+        "status": "active"
+      },
+      {
+        "name": "Zosyn",
+        "status": "active"
+      }
+    ]
+  }
+]
