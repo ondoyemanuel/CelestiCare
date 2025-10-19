@@ -52,6 +52,11 @@ patients_data = load_data()
 def get_patients():
     return jsonify(patients_data)
 
+@app.route("/problems-kb")
+def get_problems_kb():
+    with open('data/problems_kb.json', 'r') as f:
+        return jsonify(json.load(f))
+
 @app.route("/patients/<int:patient_id>", methods=["POST"])
 def update_patient(patient_id):
     global patients_data
@@ -137,12 +142,6 @@ def delete_patient(patient_id):
         return jsonify({"status": "deleted", "id": patient_id}), 200
     else:
         return jsonify({"error": "Patient not found"}), 404
-
-@app.route("/problems-kb")
-def get_problems_kb():
-    with open('data/problems_kb.json', 'r') as f:
-        kb = json.load(f)
-    return jsonify(kb)
 
 if __name__ == "__main__":
     build_regex_engine()

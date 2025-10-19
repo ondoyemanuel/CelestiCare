@@ -39,12 +39,14 @@
       }
     ],
     "name": "John Doe",
-    "notes": [],
-    "problems": [
-      "Hypertension",
-      "Type 1 Diabetes",
-      "type"
-    ]
+    "notes": [
+      {
+        "id": "2025-10-19T14:12:29.431Z",
+        "text": "Pt with PMH of HTN, DM2, and HLP presents with CP and SOB. ROS positive for cough and LE edema. On exam, pt is tachy, has JVD and rales. R/O MI vs CHF. Will get EKG, Troponin, BMP, and CXR. Will give Aspirin and IV fluids.",
+        "timestamp": "10/19/2025, 9:12:29 AM"
+      }
+    ],
+    "problems": []
   },
   {
     "id": 2,
@@ -81,6 +83,33 @@
         "name": "Zosyn",
         "status": "active"
       }
+    ]
+  },
+  {
+    "age": 21,
+    "id": 3,
+    "labs": [],
+    "medications": [],
+    "name": "asd",
+    "notes": [
+      {
+        "id": "2025-10-19T14:33:32.686Z",
+        "text": "Pt with PMH of HTN, DM2, and HLP presents with CP and SOB. ROS positive for cough and LE edema. On exam, pt is tachy, has JVD and rales. R/O MI vs CHF. Will get EKG, Troponin, BMP, and CXR. Will give Aspirin and IV fluids.",
+        "timestamp": "10/19/2025, 9:33:32 AM"
+      },
+      {
+        "id": "2025-10-19T14:39:54.373Z",
+        "text": "Pt with PMH of HTN, DM2, and HLP presents with CP and SOB. ROS positive for cough and LE edema. On exam, pt is tachy, has JVD and rales. R/O MI vs CHF. Will get EKG, Troponin, BMP, and CXR. Will give Aspirin and IV fluids.",
+        "timestamp": "10/19/2025, 9:39:54 AM"
+      },
+      {
+        "id": "2025-10-19T14:40:28.651Z",
+        "timestamp": "10/19/2025, 9:40:28 AM",
+        "text": "nk"
+      }
+    ],
+    "problems": [
+      "Congestive Heart Failure"
     ]
   }
 ]
