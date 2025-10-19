@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+
+/* Main App Container */
+.App {
+  text-align: left;
+}
+
+
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.fade-slide-up {
+  animation: fadeSlideUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  margin: 0;
+  
+  /* Random starry background - more frequent */
+  background-color: #0b0f19;
+  background-image: 
+    /* Small stars - random positions */
+    radial-gradient(1px 1px at 13% 7%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 89% 23%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 47% 91%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 71% 43%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 25% 68%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 94% 57%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 8% 84%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 56% 15%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 33% 39%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 78% 72%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 44% 28%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 17% 55%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 92% 11%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 61% 76%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 36% 93%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 83% 64%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 5% 37%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 68% 49%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 22% 82%, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 97% 29%, white, rgba(255,255,255,0)),
+    /* Medium stars - random positions */
+    radial-gradient(1.5px 1.5px at 19% 51%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 67% 88%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 41% 6%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 85% 34%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 11% 77%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 62% 62%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 48% 44%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 74% 18%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 28% 71%, white, rgba(255,255,255,0)),
+    radial-gradient(1.5px 1.5px at 91% 83%, white, rgba(255,255,255,0)),
+    /* Larger stars - sparse */
+    radial-gradient(2px 2px at 29% 19%, white, rgba(255,255,255,0)),
+    radial-gradient(2px 2px at 73% 47%, white, rgba(255,255,255,0)),
+    radial-gradient(2px 2px at 52% 81%, white, rgba(255,255,255,0)),
+    radial-gradient(2px 2px at 14% 42%, white, rgba(255,255,255,0)),
+    radial-gradient(2px 2px at 88% 67%, white, rgba(255,255,255,0));
+  background-repeat: repeat;
+  background-size: 500px 500px;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.App-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 35px rgba(255, 255, 255, 0.3),
+    0 0 60px rgba(173, 216, 230, 0.2);
+}
+
+.App-header {
+  background-color: transparent; /* Changed from #0b0f19 */
+  padding: 25px 20px;
+  color: white;
+  text-align: center;
+  box-shadow: none; /* Removed shadow for cleaner look */
+}
+
+.main-content > div {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+/* Sidebar for patient list */
+.sidebar {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  padding: 0 20px;
+  height: 80vh;
+}
+
+.sidebar h2 {
+  color: white; /* Make sidebar heading white */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05); /* Slight background */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar li.selected {
+  background-color: rgb(130, 170, 230);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(130, 170, 230, 0.7);
+  transition: 0.5s;
+  transition-property: box-shadow, background-color;
+}
+
+/* Main area for notes */
+.main-content {
+  flex: 3;
+  padding: 0 20px;
+  padding-left: 40px;
+  color: #fff; /* Make text white by default */
+  text-align: left;
+}
+
+.main-content h2 {
+  color: white;
+  text-align: left;
+}
+
+.main-content h3 {
+  color: white;
+  text-align: left;
+}
+
+.main-content p {
+  text-align: left;
+}
+
+.no-data-message {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin: 0;
+}
+
+textarea {
+  width: 90%;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.problem-list {
+  background-color: rgba(250, 250, 250, 0.95); /* Light gray background */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+}
+
+.problem-list h3 {
+  color: #333 !important; /* Dark text for contrast */
+}
+
+.problem-list ul {
+  list-style-type: square;
+  color: #333 !important;
+}
+
+.problem-list li {
+  color: #333;
+}
+
+.problem-list p {
+  color: #333 !important;
+}
+
+.add-button {
+  background-color: #6a5acd;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-button:hover {
+  background-color: #483d8b;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+.detect-button {
+  background: rgb(130, 170, 230);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  box-shadow: 0 0 25px rgba(130, 170, 230, 0.7);
+}
+
+.detect-button:hover {
+  box-shadow: 0 0 5px rgba(130, 170, 230, 1),
+              0 0 25px rgba(130, 170, 230, 1),
+              0 0 50px rgba(130, 170, 230, 0.8);
+}
+
+.detect-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.grouped-problems {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #eee;
+  background-color: rgba(250, 250, 250, 0.95);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.problem-category {
+  flex-basis: 33%;
+  min-width: 200px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.problem-category h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+}
+
+.problem-category ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.problem-category li {
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 0.95em;
+  margin-bottom: 3px;
+  color: #333;
+}
+
+.problem-category li:hover {
+  background-color: #f0f0f0;
+}
+
+.problem-category li.selected-term {
+  background-color: #e0e6ff;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+.add-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.deletable-problem {
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.deletable-problem:hover {
+  background-color: #e6e6fa;
+  color: #6a5acd !important;
+}
+
+.custom-add-container {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.custom-add-input {
+  flex-grow: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9em;
+}
+
+.custom-add-button {
+  flex-shrink: 0;
+  padding: 0 15px;
+  border: 1px solid rgb(130, 170, 230);
+  background-color: rgb(130, 170, 230);
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  box-shadow: 0 0 15px rgba(130, 170, 230, 0.7);
+}
+
+.custom-add-button:hover {
+  box-shadow: 0 0 5px rgba(130, 170, 230, 1),
+              0 0 25px rgba(130, 170, 230, 0.8);
+}
+
+.tab-container {
+  margin-top: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tab-button.active {
+  color: rgb(130, 170, 230);
+  border-bottom: 2px solid rgb(130, 170, 230);
+}
+
+.lab-container {
+  margin-top: 20px;
+}
+
+.lab-table {
+  width: 90%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+}
+
+.lab-table th,
+.lab-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+  color: #333;
+}
+
+.lab-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
+
+.lab-table tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+.existing-notes {
+  margin-top: 20px;
+}
+
+.existing-notes h3 {
+  margin-bottom: 5px;
+}
+
+/* Match Smart Note heading spacing to Existing Notes */
+.smart-note h3 {
+  margin-bottom: 5px;
+}
+
+.notes-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.note-item {
+  border-bottom: 1px solid #eee;
+}
+
+.note-item:last-child {
+  border-bottom: none;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 5px 10px;
+}
+
+.note-timestamp {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #555;
+}
+
+.note-delete-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.note-delete-btn:hover {
+  color: #8a2be2;
+}
+
+.note-text {
+  padding: 10px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  color: #333;
+}
+
+.add-patient-button {
+  width: calc(100% - 10px); 
+  background: rgb(130, 170, 230);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px 0 15px 0;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  box-shadow: 0 0 25px rgba(130, 170, 230, 0.7);
+}
+
+.add-patient-button:hover {
+  box-shadow: 0 0 5px rgba(130, 170, 230, 1),
+              0 0 25px rgba(130, 170, 230, 1),
+              0 0 50px rgba(130, 170, 230, 0.8);
+}
+
+.patient-name-clickable {
+  flex-grow: 1;
+}
+
+.delete-patient-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 5px;
+  margin-left: 10px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.delete-patient-btn:hover {
+  color: #8a2be2;
+}
+
+.orders-container {
+  margin-top: 20px;
+}
+
+.orders-list {
+  list-style: none;
+  padding: 0;
+  width: 90%;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.order-name {
+  font-weight: 600;
+  flex-basis: 50%;
+  color: #333;
+}
+
+.order-status {
+  font-style: italic;
+  color: #555;
+  flex-basis: 20%;
+}
+
+.reorder-button {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reorder-button:hover {
+  background-color: #117a8b;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-results-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.search-results-list li:last-child {
+  border-bottom: none;
+}
+
+.search-results-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.search-results-list li.selected-search-result {
+  background-color: #e0e6ff;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+.search-results-list li span {
+  font-size: 0.85em;
+  color: #777;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.save-note-button {
+  background: #6c757d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.save-note-button:hover {
+  background: #5a6268;
+}
+
+.save-note-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.sortable-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable-header:hover {
+  background-color: #e9ecef;
+}
+
+/* Login screen styles - centered with starry background */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* Starry background inherited from body */
+}
+
+.login-box {
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(130, 170, 230, 0.15), rgba(100, 140, 200, 0.15));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(130, 170, 230, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(130, 170, 230, 0.4);
+  text-align: center;
+  width: 320px;
+}
+
+.login-box h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.8em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.login-box input[type="password"] {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(130, 170, 230, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+.login-box input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login-box input[type="password"]:focus {
+  outline: none;
+  border-color: rgb(130, 170, 230);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(130, 170, 230, 0.5);
+}
+
+.login-box button {
+  width: 100%;
+  background: rgb(130, 170, 230);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(130, 170, 230, 0.6);
+}
+
+.login-box button:hover {
+  background: rgb(150, 190, 250);
+  box-shadow: 0 0 10px rgba(130, 170, 230, 1),
+              0 0 30px rgba(130, 170, 230, 1),
+              0 0 50px rgba(130, 170, 230, 0.8);
+  transform: translateY(-2px);
+}
