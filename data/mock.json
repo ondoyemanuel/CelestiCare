@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "age": 45,
+    "notes": [],
+    "problems": ["Hypertension"],
+    "labs": [
+      { "name": "Creatinine", "value": 1.2, "units": "mg/dL", "date": "2025-10-18" },
+      { "name": "Potassium", "value": 4.1, "units": "mEq/L", "date": "2025-10-18" },
+      { "name": "WBC", "value": 9.5, "units": "K/uL", "date": "2025-10-18" },
+      { "name": "Troponin", "value": 0.01, "units": "ng/mL", "date": "2025-10-18" }
+    ],
+    "medications": [
+      { "name": "Lisinopril 10mg", "status": "active" },
+      { "name": "Amlodipine 5mg", "status": "active" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "age": 60,
+    "notes": [],
+    "problems": [],
+    "labs": [
+      { "name": "Creatinine", "value": 1.5, "units": "mg/dL", "date": "2025-10-18" },
+      { "name": "WBC", "value": 15.2, "units": "K/uL", "date": "2025-10-18" },
+      { "name": "Lactate", "value": 2.5, "units": "mmol/L", "date": "2025-10-18" }
+    ],
+    "medications": [
+      { "name": "IV Fluids", "status": "active" },
+      { "name": "Zosyn", "status": "active" }
+    ]
+  }
+]
